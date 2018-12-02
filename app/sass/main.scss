@@ -1,0 +1,416 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+
+::placeholder{
+    color: #666;
+}
+
+::selection{
+    color: #fff;
+    background-color: $accent;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: $default-font;
+    font-size: 31px;
+    line-height: 1.6;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    min-width: 320px;
+    input,
+    textarea{
+        border: #666 1px solid;
+        outline: none;
+        &:focus:required:invalid{
+            border-color: red;
+        }
+        &:required:valid{
+            border-color: green;
+        }
+    }
+}
+.img-responsive{
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+
+/* Header
+ * =============================== */
+
+.header{
+    color: $text-header;
+    background-color: $accent;
+    .row{
+        min-height: 472px;
+        .logo{
+            display: inline-block;
+
+            width: 100%;
+            max-width: 260px;
+        }
+        .header-title{
+            padding-left: 30px;
+            h1{
+                font-family: 'Montserrat';
+                font-size: 60px;
+                font-weight: 700;
+            }
+            h2{
+                font-size: 40px;
+                font-weight: 600;
+            }
+        }
+        .header-info{
+            font-size: 26px;
+            .address{
+                position: relative;
+
+                white-space: nowrap;
+                &::before{
+                    position: absolute;
+                    top: 6px;
+                    left: -50px;
+
+                    width: 26px;
+                    height: 28px;
+
+                    content: '';
+
+                    background: url('../img/map_pin.png') no-repeat;
+                }
+                label{
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .contacts{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    top: 12px;
+                    left: -50px;
+
+                    width: 26px;
+                    height: 26px;
+
+                    content: '';
+
+                    background: url('../img/globe.png') no-repeat;
+                }
+            }
+            .telephone{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    top: 8px;
+                    left: -50px;
+
+                    width: 26px;
+                    height: 26px;
+
+                    content: '';
+
+                    background: url('../img/telephone.png') no-repeat;
+                }
+            }
+            a{
+                color: $text-header;
+            }
+        }
+    }
+}
+
+
+
+/* Main
+ * =============================== */
+
+.wrapper{
+    position: relative;
+    h2{
+        font-family: 'Montserrat';
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 84px;
+    }
+
+    .case1{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 84px;
+            height: 84px;
+            margin: auto;
+
+            content: '';
+
+            border-radius: 50%;
+            background: url('../img/case1.png') no-repeat center $accent;
+            background-size: 33px;
+        }
+    }
+    .case2{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 84px;
+            height: 84px;
+            margin: auto;
+
+            content: '';
+
+            border-radius: 50%;
+            background: url('../img/case2.png') no-repeat center $accent;
+        }
+    }
+    .graph{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 84px;
+            height: 84px;
+            margin: auto;
+
+            content: '';
+
+            border-radius: 50%;
+            background: url('../img/graph.png') no-repeat center $accent;
+        }
+    }
+
+    ul.timeline{
+        position: relative;
+
+        padding: 0 0 0 36px;
+
+        list-style: none;
+
+        border-left: 1px solid $timeline;
+        &::before{
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: -5px;
+
+            width: 10px;
+            height: 75px;
+
+            content: '';
+        }
+        &::after{
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            left: -5px;
+
+            width: 10px;
+            height: 120px;
+
+            content: '';
+        }
+        .event{
+            position: relative;
+
+            height: 200px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &::after{
+                position: absolute;
+                z-index: 30;
+                top: 65px;
+                left: -50px;
+
+                display: block;
+
+                width: 27px;
+                height: 27px;
+
+                content: '';
+
+                border-radius: 50%;
+                background: $aside;
+                box-shadow: 0 0 0 3px $timeline;
+            }
+            a{
+                font-weight: 600;
+
+                color: $accent;
+            }
+        }
+    }
+
+    .aside{
+        position: relative;
+
+        padding-top: 70px;
+        padding-bottom: 100px;
+
+        background-color: $aside;
+
+        flex: 0 0 31.333%;
+        &::before{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -1000%;
+
+            width: 1000%;
+            height: 100%;
+
+            content: '';
+
+            background-color: $aside;
+        }
+        .profile-info{
+            padding-right: 30px;
+        }
+        h2{
+            padding-left: 115px;
+        }
+        p{
+            padding: 24px 0 65px 0;
+        }
+        ul.interests{
+            position: relative;
+
+            margin: 35px 58px 65px 0;
+            padding: 0;
+
+            list-style: none;
+            li{
+                position: relative;
+
+                display: inline-block;
+                a{
+                    font-weight: 600;
+
+                    display: inline-block;
+
+                    width: 106px;
+
+                    text-align: center;
+
+                    color: inherit;
+                    img{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+        ul.timeline{
+            margin: 24px 0 65px 22px;
+            &::before{
+                background-color: $aside;
+            }
+            &::after{
+                background-color: $aside;
+            }
+        }
+    }
+
+    .main{
+        padding-top: 70px;
+        padding-bottom: 100px;
+        padding-left: 33px;
+        ul.timeline{
+            margin: 24px 0 105px 110px;
+            &::before{
+                background-color: $lite;
+            }
+            &::after{
+                background-color: $lite;
+            }
+        }
+        h2{
+            padding-left: 145px;
+        }
+        p{
+            height: 176px;
+            margin-top: 24px;
+        }
+        .chart{
+            position: relative;
+
+            display: inline-block;
+
+            width: 250px;
+            margin: 40px auto 20px;
+            padding: 0 10px;
+
+            text-align: center;
+            .percentage{
+                font-size: 48px;
+
+                display: inline-block;
+
+                margin-bottom: .5em;
+                sup{
+                    font-size: 48px;
+
+                    top: 0;
+                }
+                &.easyPieChart{
+                    position: relative;
+
+                    text-align: center;
+                    canvas{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+            .label{
+                font-weight: 600;
+
+                position: absolute;
+                left: -10px;
+
+                width: 270px;
+                margin-bottom: .5em;
+
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+
+@import 'media';

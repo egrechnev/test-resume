@@ -1,0 +1,451 @@
+@import 'vars';
+
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width: 1400px){
+    body{
+        font-size: 24px;
+    }
+    .wrapper{
+        h2{
+            font-size: 42px;
+        }
+        ul.timeline{
+            &::after{
+                height: 95px;
+            }
+            .event{
+                height: 150px;
+                &::after{
+                    top: 45px;
+                }
+            }
+        }
+        .aside{
+            h2{
+                padding-left: 100px;
+            }
+            ul.interests{
+                margin: 35px 38px 65px 0;
+                li{
+                    a{
+                        width: 90px;
+                    }
+                }
+            }
+            ul.timeline{
+                margin: 24px 0 30px 22px;
+            }
+        }
+        .main{
+            p{
+                height: 126px;
+            }
+            ul.timeline{
+                margin: 24px 0 0 110px;
+                &::before{
+                    height: 60px;
+                }
+                &::after{
+                    height: 95px;
+                }
+                .event{
+                    &::after{
+                        top: 45px;
+                    }
+                }
+            }
+            .chart{
+                width: 190px;
+                .percentage{
+                    font-size: 48px;
+                    sup{
+                        font-size: 48px;
+
+                        top: 0;
+                    }
+                    &.easyPieChart{
+                        line-height: 150px!important;
+
+                        width: 150px!important;
+                        height: 150px!important;
+                        canvas{
+                            width: 150px!important;
+                            height: 150px!important;
+                        }
+                    }
+                }
+                .label{
+                    width: 210px;
+                }
+            }
+        }
+    }
+}
+
+//Extra large: ≥1200px
+@include media-breakpoint-down(xl){
+    .max-width-content{
+        max-width: 1620px;
+        margin: 0 auto;
+    }
+}
+
+//Large: ≥992px
+@include media-breakpoint-down(lg){
+    body{
+        font-size: 20px;
+    }
+    .header{
+        .row{
+            min-height: 360px;
+            .header-title{
+                padding-left: 10px;
+                h1{
+                    font-size: 48px;
+                }
+                h2{
+                    font-size: 36px;
+                }
+            }
+            .header-info{
+                font-size: 20px;
+                .address{
+                    &::before{
+                        top: 2px;
+                    }
+                }
+                .contacts{
+                    &::before{
+                        top: 5px;
+                    }
+                }
+                .telephone{
+                    &::before{
+                        top: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper{
+        h2{
+            font-size: 36px;
+            line-height: 70px;
+        }
+        .case1{
+            &::before{
+                width: 64px;
+                height: 64px;
+
+                background-size: 28px;
+            }
+        }
+        .case2{
+            &::before{
+                width: 64px;
+                height: 64px;
+
+                background-size: 28px;
+            }
+        }
+        .graph{
+            &::before{
+                width: 64px;
+                height: 64px;
+
+                background-size: 28px;
+            }
+        }
+        ul.timeline{
+            &::after{
+                height: 105px;
+            }
+            &::before{
+                height: 50px;
+            }
+            .event{
+                height: 150px;
+                &::after{
+                    top: 35px;
+                }
+            }
+        }
+        .aside{
+            padding-right: 0;
+            padding-left: 0;
+            h2{
+                padding-left: 78px;
+            }
+            ul.interests{
+                margin: 35px 18px 65px 0;
+                li{
+                    a{
+                        width: 80px;
+                    }
+                }
+            }
+            ul.timeline{
+                margin: 24px 0 0 22px;
+            }
+        }
+
+        .main{
+            ul.timeline{
+                margin: 24px 0 0 23px;
+                &::before{
+                    height: 50px;
+                }
+                &::after{
+                    height: 105px;
+                }
+                .event{
+                    &::after{
+                        top: 35px;
+                    }
+                }
+            }
+            h2{
+                padding-left: 100px;
+            }
+            .chart{
+                width: 140px;
+                .percentage{
+                    font-size: 38px;
+                    sup{
+                        font-size: 38px;
+
+                        top: 0;
+                    }
+                    &.easyPieChart{
+                        line-height: 120px!important;
+
+                        width: 120px!important;
+                        height: 120px!important;
+                        canvas{
+                            width: 120px!important;
+                            height: 120px!important;
+                        }
+                    }
+                }
+                .label{
+                    width: 160px;
+                }
+            }
+        }
+    }
+}
+
+//Medium: ≥768px
+@include media-breakpoint-down(md){
+    body{
+        font-size: 18px;
+    }
+    .header{
+        .row{
+            .header-title{
+                padding-left: 0;
+                h1{
+                    font-size: 32px;
+                }
+                h2{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .wrapper{
+        h2{
+            font-size: 24px;
+            line-height: 70px;
+        }
+        .aside{
+            ul.interests{
+                margin: 35px 13px 65px 0;
+                li{
+                    a{
+                        width: 70px;
+                    }
+                }
+            }
+        }
+        .main{
+            .chart{
+                width: 130px;
+                .percentage{
+                    font-size: 38px;
+                    sup{
+                        font-size: 38px;
+
+                        top: 0;
+                    }
+                    &.easyPieChart{
+                        line-height: 90px!important;
+
+                        width: 90px!important;
+                        height: 90px!important;
+                        canvas{
+                            width: 90px!important;
+                            height: 90px!important;
+                        }
+                    }
+                }
+                .label{
+                    width: 150px;
+                }
+            }
+        }
+        ul.timeline{
+            .event{
+                &::after{
+                    top: 30px;
+                }
+            }
+        }
+    }
+}
+
+//Small: ≥576px
+@include media-breakpoint-down(sm){
+    body{
+        font-size: 16px;
+    }
+    .header{
+        .row{
+            .logo{
+                width: 95px;
+            }
+            .header-title{
+                h1{
+                    font-size: 28px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+            }
+            .header-info{
+                margin-left: 110px;
+            }
+        }
+    }
+    .wrapper{
+        h2{
+            font-size: 18px;
+            line-height: 70px;
+        }
+        .aside{
+            padding-top: 30px;
+            padding-bottom: 0;
+
+            flex: 0 0 100%;
+            &::after{
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: -15px;
+
+                width: 15px;
+                height: 100%;
+
+                content: '';
+
+                background-color: $aside;
+            }
+            ul.interests{
+                max-width: 380px;
+                margin: 35px 0 65px 0;
+                li{
+                    a{
+                        width: 100px;
+                        img{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .main{
+            padding-left: 0;
+        }
+    }
+}
+
+//Extra small: >0
+@include media-breakpoint-down(xs){
+    .header{
+        .row{
+            min-height: 340px;
+            .logo{
+                width: 60px;
+            }
+            .header-title{
+                h1{
+                    font-size: 24px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+            }
+            .header-info{
+                font-size: 18px;
+
+                margin-left: 75px;
+            }
+        }
+    }
+    .wrapper{
+        .aside{
+            padding-top: 30px;
+            p{
+                padding: 24px 30px 35px 0;
+            }
+            ul.interests{
+                max-width: 300px;
+                margin: 35px 0 50px 0;
+                li{
+                    a{
+                        width: 80px;
+                        img{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .main{
+            ul.timeline{
+                .event{
+                    font-size: 14px;
+                }
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
+@include media-breakpoint-up(xs){
+}
+
+//Small: ≤576px
+@include media-breakpoint-up(sm){
+}
+
+//Medium: ≤768px
+@include media-breakpoint-up(md){
+}
+
+//Large: ≤992px
+@include media-breakpoint-up(lg){
+}
+
+//Extra large: ≤1200px
+@include media-breakpoint-up(xl){
+}
